@@ -7,13 +7,16 @@ using .GaussSeidelModule
 
 """
 *************************
-        Questão 2
+        Questão 3
 *************************
 """
 
-m = [1 1/3 -1/9; 2/5 1 -3/5; -1/7 2/7 1]
-c = [2/9; -1/5; -3/7]
+b = [1.0, 4.0, 0.0]
+m = [3.0 -1.0 1.0; 3.0 3.0 7.0; 3.0 6.0 2.0]
 
-matriz_solucao = GaussSeidel(m, c, 0.004)
+m[2,:], m[3,:] = m[3,:], m[2,:]
+b[2], b[3] = b[3], b[2]
+
+matriz_solucao = GaussSeidel(m, b, 0.001)
 
 println(matriz_solucao)
