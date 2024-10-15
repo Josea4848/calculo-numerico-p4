@@ -9,13 +9,13 @@ function trapeziumRule(y, a, b, n)
   x = a + h #valor inicial para x
   somatorio = y(a)+ y(b) #valores dos extremos para o somatório
   
-  @printf("x\t\t|y\t\n")
+  @printf("x\t\t|y\t\tt_i\n")
   @printf("%f\t|%f\t\n", a, y(a))
 
   for i in 1:n-1
     somatorio += 2*y(x)
 
-    @printf("%f\t|%f\t\n", x, y(x))
+    @printf("%f\t|%f\t|2\n", x, y(x))
 
     x += h  
   end 
